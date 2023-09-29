@@ -4,6 +4,7 @@ import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Button
@@ -40,12 +41,14 @@ fun IncidentCreateScreen(navController: NavController) {
         TextField(
             value = descState.value,
             onValueChange = { descState.value = it },
+            modifier = Modifier.fillMaxWidth(1f),
             label = { Text("Enter description") }
         )
         TextField(
             value = latitudeState.value,
             onValueChange = { latitudeState.value = it },
             label = { Text("Enter latitude") },
+            modifier = Modifier.fillMaxWidth(1f),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
 
 
@@ -54,6 +57,7 @@ fun IncidentCreateScreen(navController: NavController) {
             value = longitudeState.value,
             onValueChange = { longitudeState.value = it },
             label = { Text("Enter longitude") },
+            modifier = Modifier.fillMaxWidth(1f),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
 
         )

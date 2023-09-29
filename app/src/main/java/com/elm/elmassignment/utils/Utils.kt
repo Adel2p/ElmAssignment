@@ -11,8 +11,8 @@ object Utils {
     @RequiresApi(Build.VERSION_CODES.O)
     fun parseIncidentDate(date: String?): String {
         val inputPattern = "yyyy-MM-dd'T'hh:mm:ss.SSS'Z'"
-        var inputDate: LocalDate? = null
-        var outputDate: String? = null
+        val inputDate: LocalDate?
+        val outputDate: String?
         val inputFormatter = DateTimeFormatter.ofPattern(inputPattern, Locale.ENGLISH)
         try {
             inputDate = LocalDate.parse(date, inputFormatter)
