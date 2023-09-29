@@ -98,7 +98,7 @@ fun FoodCategoriesList(
     Column() {
 
         LazyColumn(
-            contentPadding = PaddingValues(bottom = 60.dp)
+            contentPadding = PaddingValues(bottom = 20.dp)
         ) {
             items(foodItems) { item ->
                 FoodItemRow(item = item, onItemClicked = onItemClicked)
@@ -148,6 +148,20 @@ fun FoodItemDetails(
     Column(modifier = modifier) {
         Text(
             text = item?.description ?: "",
+            textAlign = TextAlign.Center,
+            style = MaterialTheme.typography.subtitle1,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis
+        )
+        Text(
+            text = ("create at: " + item?.createdAt) ?: "",
+            textAlign = TextAlign.Center,
+            style = MaterialTheme.typography.subtitle1,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis
+        )
+        Text(
+            text = ("updated at: " + item?.updatedAt) ?: "",
             textAlign = TextAlign.Center,
             style = MaterialTheme.typography.subtitle1,
             maxLines = 2,

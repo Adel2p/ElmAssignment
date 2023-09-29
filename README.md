@@ -22,7 +22,6 @@ The sample app layers its presentation through MVVM presentation pattern. Additi
         * [Navigation](https://developer.android.com/topic/libraries/architecture/navigation/) for navigation between composables
         * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) that stores, exposes and manages UI state
     * [Retrofit](https://square.github.io/retrofit/) for networking
-    * [Coil](https://github.com/coil-kt/coil) for image loading
     
 * Modern Architecture
     * Single activity architecture (with [Navigation component](https://developer.android.com/guide/navigation/navigation-getting-started)) that defines navigation graphs
